@@ -37,26 +37,19 @@ function submit_button_clicked(e){
       var result = 0;
       var empty;
 
-      if(m1_input.length == 0){
-        empty = $(e.currentTarget.parentElement).find('#field1')
-        result = parseInt(m2_input)*parseInt(v2_input)/parseInt(v1_input);
-      }
-
-      if(v1_input.length == 0){
-        empty = $(e.currentTarget.parentElement).find('#field2')
-        result = parseInt(m2_input)*parseInt(v2_input)/parseInt(m1_input);
-      }
-
       if(m2_input.length == 0){
         empty = $(e.currentTarget.parentElement).find('#field3')
+        $(e.currentTarget.parentElement).find('#field3_label').hide();
         result = parseInt(m1_input)*parseInt(v1_input)/parseInt(v2_input);
       }
 
       if(v2_input.length == 0){
         empty = $(e.currentTarget.parentElement).find('#field4')
+        $(e.currentTarget.parentElement).find('#field4_label').hide();
         result = parseInt(m1_input)*parseInt(v1_input)/parseInt(m2_input);
       }
 
       //console.log("result = ", result)
+      empty.addClass('result');
       empty.val( result );
 }

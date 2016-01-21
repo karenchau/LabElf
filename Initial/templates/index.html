@@ -3,6 +3,7 @@
   <head>
     <title>LabElf</title>
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="/resources/style.css">
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -31,7 +32,7 @@
           </label>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="field3" disabled>
-            <label class="mdl-textfield__label" for="field3">Concentration 2</label>
+            <label id="field3_label" class="mdl-textfield__label" for="field3">Concentration 2</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div><br>
           <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="field4-radio">
@@ -40,13 +41,14 @@
           </label>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="field4">
-            <label class="mdl-textfield__label" for="field4">Volume 2</label>
+            <label id="field3_label" class="mdl-textfield__label" for="field4">Volume 2</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div><br>
         </div>
         <!--<label for="result">Volumn 2</label>-->
         <!--<div id="result"></div>-->
         <button id="submit">Calculate</button>
+
 
 
   </form>
