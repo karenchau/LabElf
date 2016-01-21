@@ -1,7 +1,27 @@
 $(document).ready(configure_events);
 
 function configure_events() {
+  $('#field3-radio').click(radio_button_3_clicked);
+  $('#field4-radio').click(radio_button_4_clicked);
   $('#submit').click(submit_button_clicked);
+}
+
+function radio_button_3_clicked(e) {
+  /* The option selected will disable the text box for that category because
+      that is the field that we are trying to calculate. */
+
+      var textbox_to_be_disabled = $(e.currentTarget.parentElement.parentElement).find('#field3');
+      textbox_to_be_disabled.prop("disabled",true);
+      $(e.currentTarget.parentElement.parentElement).find('#field4').prop("disabled", false);
+}
+
+function radio_button_4_clicked(e) {
+  /* The option selected will disable the text box for that category because
+      that is the field that we are trying to calculate. */
+
+      var textbox_to_be_disabled = $(e.currentTarget.parentElement.parentElement).find('#field4');
+      textbox_to_be_disabled.prop("disabled", true);
+      $(e.currentTarget.parentElement.parentElement).find('#field3').prop("disabled", false);
 }
 
 function submit_button_clicked(e){
