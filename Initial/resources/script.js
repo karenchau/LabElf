@@ -1,27 +1,28 @@
 $(document).ready(configure_events);
 
 function configure_events() {
-  $('#field3-radio').click(radio_button_3_clicked);
-  $('#field4-radio').click(radio_button_4_clicked);
+  $('#field3-radio').click(radio_button_clicked);
+  $('#field4-radio').click(radio_button_clicked);
   $('#submit').click(submit_button_clicked);
 }
 
-function radio_button_3_clicked(e) {
+function radio_button_clicked(e) {
   /* The option selected will disable the text box for that category because
       that is the field that we are trying to calculate. */
-
-      var textbox_to_be_disabled = $(e.currentTarget.parentElement.parentElement).find('#field3');
-      textbox_to_be_disabled.prop("disabled",true);
-      $(e.currentTarget.parentElement.parentElement).find('#field4').prop("disabled", false);
+      var textfields = $(e.currentTarget.parentElement.parentElement).find('.options-textfield');
+      for (int i = 0; i < textfields.length; i++) {
+        textfields[i].prop("disabled", false);
+        textfields.removeClass('result');
+      }
+      var current_textbox = $(e.currentTarget.parentElement).find('.options-textfield');
+      current_textbox.prop("disabled",true);
+      current_textbox.addClass('result');
 }
 
-function radio_button_4_clicked(e) {
-  /* The option selected will disable the text box for that category because
-      that is the field that we are trying to calculate. */
-
-      var textbox_to_be_disabled = $(e.currentTarget.parentElement.parentElement).find('#field4');
-      textbox_to_be_disabled.prop("disabled", true);
-      $(e.currentTarget.parentElement.parentElement).find('#field3').prop("disabled", false);
+function on_key_down(e) {
+  /* On key down, this function will check if all the textfields except for
+      the selected one is filled in. If it is, then the selected field will
+  */
 }
 
 function submit_button_clicked(e){

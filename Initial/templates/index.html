@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>LabElf</title>
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="/resources/style.css">
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="/resources/script.js"></script>
+<head>
+  <title>LabElf</title>
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="/resources/style.css">
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="/resources/script.js"></script>
 
-  </head>
+</head>
 
-  <body>
-    <section id="formulas">
-      <article class="formula_input_form">
+<body>
+  <section id="formulas">
+    <article class="formula_input_form">
+      <div>
+        <h3>What do you want to calculate?</h3>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input options-textfield" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="field1">
+          <label class="mdl-textfield__label" for="field1">Concentration 1</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div><br>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input options-textfield" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="field2">
+          <label class="mdl-textfield__label" for="field2">Volume 1</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div><br>
         <div>
-          <h3>What do you want to calculate?</h3>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="field1">
-            <label class="mdl-textfield__label" for="field1">Concentration 1</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div><br>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="field2">
-            <label class="mdl-textfield__label" for="field2">Volume 1</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div><br>
           <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="field3-radio">
             <input type="radio" id="field3-radio" class="mdl-radio__button" name="options" value="1" checked>
             <span class="mdl-radio__label"></span>
           </label>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="field3" disabled>
+            <input class="mdl-textfield__input options-textfield" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="field3" disabled>
             <label id="field3_label" class="mdl-textfield__label" for="field3">Concentration 2</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
-          </div><br>
+          </div>
+        </div><br>
+        <div>
           <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="field4-radio">
             <input type="radio" id="field4-radio" class="mdl-radio__button" name="options" value="2">
             <span class="mdl-radio__label"></span>
           </label>
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="field4">
+            <input class="mdl-textfield__input options-textfield" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="field4">
             <label id="field3_label" class="mdl-textfield__label" for="field4">Volume 2</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
-          </div><br>
-        </div>
-        <!--<label for="result">Volumn 2</label>-->
-        <!--<div id="result"></div>-->
-        <button id="submit">Calculate</button>
+          </div>
+        </div><br>
+      </div>
+      <!--<label for="result">Volumn 2</label>-->
+      <!--<div id="result"></div>-->
+      <button id="submit">Calculate</button>
 
-
-
-  </form>
-  <article>
-</section>
-  </body>
+    </article>
+  </section>
+</body>
 </html>
